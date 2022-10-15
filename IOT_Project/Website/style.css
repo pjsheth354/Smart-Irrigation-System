@@ -1,0 +1,212 @@
+.container_main{
+    width: 725px;
+    height: auto;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Heading Style */
+.header span{
+    font-size: small;
+    background-color: #AF1B3F;
+    color: white;
+    padding: 2px;
+    border-radius: 2px;
+}
+.header h2{
+    font-weight: bold;
+    color: #402593;
+}
+.header h4{
+    font-weight: bold;
+    color: #dd0269;
+}
+
+h4 .text1{
+    font-size: medium;
+    background-color: rgb(237 26 26);
+    color: white;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+h4 .text2{
+    font-size: medium;
+    background-color: #D3F6DB;
+    color: #020202;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+h4 .text3{
+    font-size: medium;
+    background-color: #F4C095;
+    color: #020202;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+h4 .text4{
+    font-size: medium;
+    color: #F0F7F4;
+    background-color: #1D7874;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+/* Progress Bar Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.container{
+    display: flex;
+    width: 600px;
+}
+.wrapper{
+  display: flex;
+  flex: 1;
+  padding-left: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .card{
+  background: #fff;
+  flex: 1 1;
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+.wrapper .card .circle{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  cursor: default;
+}
+.card .circle .box,
+.card .circle .box span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.card .circle .box{
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: all 0.2s;
+}
+.card .circle:hover .box{
+  transform: translate(-50%, -50%) scale(0.91);
+}
+.card .circle .box span,
+.wrapper .card .text{
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.circle .box span{
+  font-size: 38px;
+  font-family: sans-serif;
+  font-weight: 600;
+  transform: translate(-45%, -45%);
+  transition: all 0.1s;
+}
+.card .circle:hover .box span{
+  transform: translate(-45%, -45%) scale(1.09);
+}
+.card .text{
+  font-size: 20px;
+  font-weight: 600;
+}
+@media(max-width: 753px){
+  .wrapper{
+    max-width: 700px;
+  }
+  .wrapper .card{
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+  }
+}
+@media(max-width: 505px){
+  .wrapper{
+    max-width: 500px;
+  }
+  .wrapper .card{
+    width: 100%;
+  }
+}
+
+/* Toggle Styling */
+
+.content {
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  width: 126px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #6E6E6E;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 0 4px rgb(211, 211, 212);
+  outline: none;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
